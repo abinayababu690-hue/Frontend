@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+
+    background:linear-gradient(to right,#95d3ee,#de79de);
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:yellow;
+}
+
+/* Hero Section */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:80px;
+
+    background:linear-gradient(to right,#cce798,#d8d1f4,#dddfe3);
+    color:rgb(6, 1, 1);
+}
+
+.hero-content{
+    width:50%;
+}
+
+.tag{
+    background:rgba(255,255,255,0.2);
+    padding:10px 15px;
+    border-radius:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:25px;
+    margin-bottom:30px;
+}
+
+.hero-content button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+
+    background:#dc8168;
+    color:white;
+
+    font-size:18px;
+    cursor:pointer;
+}
+
+.hero-content button:hover{
+    background:#ff5722;
+}
+
+.hero-image img{
+    width:550px;
+}
+
+/* Courses Section */
+
+.courses{
+    text-align:center;
+    padding:80px 50px;
+}
+
+.courses h4{
+    color:#ff4da6;
+    margin-bottom:10px;
+}
+
+.courses h1{
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+/* Grid */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.6;
+}
+
+.card button{
+    margin-top:20px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#d46a9f;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    background:#1f2a63;
+    color:white;
+
+    text-align:center;
+    padding:40px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-image img{
+        width:300px;
+        margin-top:30px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+}

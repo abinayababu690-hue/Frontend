@@ -1,0 +1,139 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* FULL SCREEN BACKGROUND */
+body{
+    height: 100vh;
+    background-image: url("background.jpg"); /* your image file */
+    background-size: cover;        /* fills full screen */
+    background-position: center;   /* center image */
+    background-repeat: no-repeat;  /* no repeat */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #0d1b2a;
+    color: white;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover{
+    color: #00d4ff;
+}
+
+/* Hero */
+.hero{
+    height: 90vh;
+    background: linear-gradient(to right, #0d1b2a, #1b263b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn{
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background: white;
+}
+
+/* Sections */
+.section{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2{
+    margin-bottom: 20px;
+    color: #0d1b2a;
+}
+
+.light{
+    background: #f4f4f4;
+}
+
+/* Cards */
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+/* Benefits */
+.benefits{
+    list-style: none;
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* Footer */
+footer{
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

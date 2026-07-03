@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess The Secret Number</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+    overflow:hidden;
+}
+
+.game-box{
+    width:420px;
+    padding:35px;
+    text-align:center;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 0 30px rgba(0,255,255,0.3);
+    color:white;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:10px;
+    text-shadow:0 0 15px cyan;
+}
+
+.secret{
+    width:100px;
+    height:100px;
+    margin:20px auto;
+    border-radius:50%;
+    background:white;
+    color:#111;
+    font-size:40px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 20px cyan;
+}
+
+input{
+    width:85%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    text-align:center;
+    margin-top:10px;
+    outline:none;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 28px;
+    border:none;
+    border-radius:12px;
+    background:cyan;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px cyan;
+}
+
+#message{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-size:18px;
+}
+
+.glow{
+    animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 10px cyan;
+    }
+    to{
+        box-shadow:0 0 30px cyan;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="game-box">
+
+    <h1>🎯 Guess The Number</h1>
+    <p>Guess the secret number between 1 and 50</p>
+
+    <div class="secret glow" id="secretBox">?</div>
+
+    <input type="number" id="guess" placeholder="Enter your guess">
+
+    <br>
+
+    <button onclick="checkGuess()">Guess</button>
+
+    <div id="message">Start Guessing...</div>
+
+    <div class="info">
+        <span>❤️ Chances: <span id="chance">5</span></span>
+        <span>🏆 Score: <span id="score">50</span></span>
+    </div>
+
+</div>
+
+<script>
+
+// Hidden backend number
+const secretNumber = 27;
+
+let chances = 5;
+let score = 50;
+
+function checkGuess(){
+
+    const guess = Number(document.getElementById("guess").value);
+    const message = document.getElementById("message");
+
+    if(chances <= 0){
+        return;
+    }
+
+    if(guess === secretNumber){
+
+        document.getElementById("secretBox").innerHTML = secretNumber;
+
+        message.innerHTML = "🎉 Congratulations! You Won!";
+        message.style.color = "#00ff88";
+
+        document.body.style.background =
+        "linear-gradient(135deg,#11998e,#38ef7d)";
+
+    }
+    else if(guess < secretNumber){
+
+        chances--;
+        score -= 10;
+
+        message.innerHTML = "📉 Too Low!";
+        message.style.color = "orange";
+    }
+    else{
+
+        chances--;
+        score -= 10;
+
+        message.innerHTML = "📈 Too High!";
+        message.style.color = "#ff4d4d";
+    }
+
+    document.getElementById("chance").innerHTML = chances;
+    document.getElementById("score").innerHTML = score;
+
+    if(chances === 0 && guess !== secretNumber){
+
+        document.getElementById("secretBox").innerHTML = secretNumber;
+
+        message.innerHTML =
+        "💥 Game Over! Secret Number was " + secretNumber;
+
+        message.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>

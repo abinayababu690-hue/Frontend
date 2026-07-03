@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #003366;
+        }
+
+        h2 {
+            color: #00509e;
+            border-bottom: 2px solid #00509e;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #006600;
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            background-color: #d9eaf7;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        center {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h1>Student Information System</h1>
+    </center>
+
+    <hr>
+
+    <h2>About Student</h2>
+    <p>
+        This webpage displays student details, skills, and academic information
+        using HTML and CSS.
+    </p>
+
+    <h2>Student Details</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Year</th>
+        </tr>
+
+        <tr>
+            <td>Abinaya</td>
+            <td>BCA</td>
+            <td>III</td>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>B.Sc CS</td>
+            <td>II</td>
+        </tr>
+    </table>
+
+    <h2>Skills</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Learning Steps</h2>
+
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+        <li>Build Projects</li>
+    </ol>
+
+    <h3>Useful Link</h3>
+
+    <a href="https://www.w3schools.com" target="_blank">
+        Visit W3Schools
+    </a>
+
+    <hr>
+
+    <center>
+        <p>&copy; 2026 Student Information System</p>
+    </center>
+
+</body>
+</html>
